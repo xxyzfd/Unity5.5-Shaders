@@ -86,7 +86,7 @@
 
 				// Same outline width on different object distance
 				float dist = length(ObjSpaceViewDir(v.vertex));
-				o.pos.xy += offset * o.pos.z * _OutlineSize * dist;
+				o.pos.xy += offset * o.pos.z * _OutlineSize * pow(dist,0.5);
 
 				return o;
 			}
